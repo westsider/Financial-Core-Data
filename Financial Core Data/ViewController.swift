@@ -6,6 +6,14 @@
 //  Copyright © 2018 Warren Hansen. All rights reserved.
 //
 
+//  [ ] login vc
+//  [ ] alert class, email string extention - Class helpers
+//  [ ]
+//  [ ] save creds to core data
+//  [ ] make network call - Network Service
+//  [ ] save date, close to core data
+//  [ ] tableview controller, pull data from core data
+
 import UIKit
 
 class ViewController: UIViewController {
@@ -15,11 +23,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+
 
 
 }
+
+
 

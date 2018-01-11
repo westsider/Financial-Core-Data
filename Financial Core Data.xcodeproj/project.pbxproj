@@ -13,6 +13,7 @@
 		0D6C61D52007DD80001FEA2F /* Financial_Core_Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0D6C61D32007DD80001FEA2F /* Financial_Core_Data.xcdatamodeld */; };
 		0D6C61D72007DD80001FEA2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D6C61D62007DD80001FEA2F /* Assets.xcassets */; };
 		0D6C61DA2007DD80001FEA2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D6C61D82007DD80001FEA2F /* LaunchScreen.storyboard */; };
+		0D6C61E220080D1B001FEA2F /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6C61E120080D1B001FEA2F /* Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		0D6C61D62007DD80001FEA2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D6C61D92007DD80001FEA2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D6C61DB2007DD80001FEA2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D6C61E120080D1B001FEA2F /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +58,13 @@
 		0D6C61CB2007DD80001FEA2F /* Financial Core Data */ = {
 			isa = PBXGroup;
 			children = (
-				0D6C61CC2007DD80001FEA2F /* AppDelegate.swift */,
-				0D6C61CE2007DD80001FEA2F /* ViewController.swift */,
 				0D6C61D02007DD80001FEA2F /* Main.storyboard */,
+				0D6C61CE2007DD80001FEA2F /* ViewController.swift */,
+				0D6C61E120080D1B001FEA2F /* Helpers.swift */,
 				0D6C61D62007DD80001FEA2F /* Assets.xcassets */,
 				0D6C61D82007DD80001FEA2F /* LaunchScreen.storyboard */,
 				0D6C61DB2007DD80001FEA2F /* Info.plist */,
+				0D6C61CC2007DD80001FEA2F /* AppDelegate.swift */,
 				0D6C61D32007DD80001FEA2F /* Financial_Core_Data.xcdatamodeld */,
 			);
 			path = "Financial Core Data";
@@ -142,6 +145,7 @@
 				0D6C61CF2007DD80001FEA2F /* ViewController.swift in Sources */,
 				0D6C61D52007DD80001FEA2F /* Financial_Core_Data.xcdatamodeld in Sources */,
 				0D6C61CD2007DD80001FEA2F /* AppDelegate.swift in Sources */,
+				0D6C61E220080D1B001FEA2F /* Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
