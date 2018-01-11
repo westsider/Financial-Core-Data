@@ -15,6 +15,12 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    enum LoginError: Error {
+        case incompleteForm
+        case invalidEmail
+        case incorrectPasswordLength
+    }
 
     @IBOutlet weak var mailText: UITextField!
     
@@ -22,18 +28,69 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        getLastLogin()
     }
 
     @IBAction func loginAction(_ sender: UIButton) {
+        
+        do {
+            try login()
+            // segue to next vc for tableview of prices
+        } catch LoginError.incompleteForm {
+            Alert.showBasic(title: "Incomplete Form!", message: "Please fill out both email and password", vc: self)
+        } catch LoginError.invalidEmail {
+            Alert.showBasic(title: "Invalid Email Format", message: "Please make sure you format your email correctly", vc: self)
+        } catch LoginError.incorrectPasswordLength {
+            Alert.showBasic(title: "Password too short", message: "Password should be at least 8 characters", vc: self)
+        } catch {
+            Alert.showBasic(title: "Unable To Login", message: "There was an error when attempting to login", vc: self)
+        }
     }
     
     
     @IBAction func signUpAction(_ sender: UIButton) {
     }
     
+    func login() throws {
+        
+        let email = mailText.text!
+        let password = passText.text!
+        
+        if email.isEmpty || password.isEmpty {
+            throw LoginError.incompleteForm
+        }
+        
+        if !email.isValidEmail {
+            throw LoginError.invalidEmail
+        }
+        
+        if password.count < 8 {
+            throw LoginError.incorrectPasswordLength
+        }
+        persistLogin(email: email, pass: password)
+        
+    }
+    
+    func persistLogin(email:String, pass:String) {
+        let defaults = UserDefaults.standard
+        defaults.set(email, forKey: "email")
+        defaults.set(pass, forKey: "pass")
+    }
+    
+    func getLastLogin() {
+        let defaults = UserDefaults.standard
+        if let mail = defaults.object(forKey: "email") as? String {
+            mailText.text = mail
+        }
+        if let pass = defaults.object(forKey: "pass") as? String {
+            passText.text = pass
+        }
+    }
+    
     
 }
+
+
 
 
 
