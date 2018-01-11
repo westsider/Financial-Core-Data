@@ -14,6 +14,7 @@
 		0D6C61D72007DD80001FEA2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D6C61D62007DD80001FEA2F /* Assets.xcassets */; };
 		0D6C61DA2007DD80001FEA2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D6C61D82007DD80001FEA2F /* LaunchScreen.storyboard */; };
 		0D6C61E220080D1B001FEA2F /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6C61E120080D1B001FEA2F /* Helpers.swift */; };
+		0D6C61E4200826EE001FEA2F /* PricesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6C61E3200826EE001FEA2F /* PricesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		0D6C61D92007DD80001FEA2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D6C61DB2007DD80001FEA2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D6C61E120080D1B001FEA2F /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		0D6C61E3200826EE001FEA2F /* PricesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				0D6C61D02007DD80001FEA2F /* Main.storyboard */,
 				0D6C61CE2007DD80001FEA2F /* ViewController.swift */,
+				0D6C61E3200826EE001FEA2F /* PricesViewController.swift */,
 				0D6C61E120080D1B001FEA2F /* Helpers.swift */,
 				0D6C61D62007DD80001FEA2F /* Assets.xcassets */,
 				0D6C61D82007DD80001FEA2F /* LaunchScreen.storyboard */,
@@ -146,6 +149,7 @@
 				0D6C61D52007DD80001FEA2F /* Financial_Core_Data.xcdatamodeld in Sources */,
 				0D6C61CD2007DD80001FEA2F /* AppDelegate.swift in Sources */,
 				0D6C61E220080D1B001FEA2F /* Helpers.swift in Sources */,
+				0D6C61E4200826EE001FEA2F /* PricesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

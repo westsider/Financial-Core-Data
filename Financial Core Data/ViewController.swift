@@ -6,8 +6,6 @@
 //  Copyright © 2018 Warren Hansen. All rights reserved.
 //
 
-
-//  [ ] save creds to ns User
 //  [ ] make network call - Network Service
 //  [ ] save date, close to core data
 //  [ ] tableview controller, pull data from core data
@@ -35,7 +33,7 @@ class ViewController: UIViewController {
         
         do {
             try login()
-            // segue to next vc for tableview of prices
+            
         } catch LoginError.incompleteForm {
             Alert.showBasic(title: "Incomplete Form!", message: "Please fill out both email and password", vc: self)
         } catch LoginError.invalidEmail {
@@ -47,7 +45,7 @@ class ViewController: UIViewController {
         }
     }
     
-    
+    //MARK: - TODO - create new account
     @IBAction func signUpAction(_ sender: UIButton) {
     }
     
@@ -68,7 +66,7 @@ class ViewController: UIViewController {
             throw LoginError.incorrectPasswordLength
         }
         persistLogin(email: email, pass: password)
-        
+        segueToPricesVC()
     }
     
     func persistLogin(email:String, pass:String) {
@@ -85,6 +83,11 @@ class ViewController: UIViewController {
         if let pass = defaults.object(forKey: "pass") as? String {
             passText.text = pass
         }
+    }
+    
+    private func segueToPricesVC() {
+        let pricesVC:PricesViewController = storyboard?.instantiateViewController(withIdentifier: "pricesVC") as! PricesViewController
+        navigationController?.pushViewController(pricesVC, animated: true)
     }
     
     
